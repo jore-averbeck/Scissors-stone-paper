@@ -6,6 +6,9 @@ import Choice from "@/components/Choice";
 
 const Container=styled.div`
 margin:1rem;
+background-color:#fffffe;
+color:#272343;
+height: 100vh;
 `;
 
 const Title=styled.h1`
@@ -17,8 +20,8 @@ text-align: center;
 const ButtonContainer=styled.div`
 display: flex;
 justify-content: center;
-margin-top: 2rem;
-gap:0.5rem;
+margin-top: 4rem;
+gap:2rem;
 `;
 
 const Button = styled.button`
@@ -28,11 +31,11 @@ const Button = styled.button`
   cursor: pointer;
 
   &:hover {
-    transform: scale(1.2); /* Vergrößert das Icon beim Überfahren */
+    transform: scale(1.2); 
   }
 
   &:active {
-    filter: brightness(0.8); /* Ändert die Helligkeit des Icons beim Klicken */
+    filter: brightness(0.8); 
   }
 `;
 
@@ -42,6 +45,11 @@ justify-content: space-between;
 align-items: center;
 gap:1rem;
 margin: 1rem auto 0;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+border:none;
+border-radius: 0.8rem;
+padding:0.5rem;
+font-size:1rem;
 `;
 
 
@@ -70,11 +78,11 @@ export default function HomePage() {
 
   return (
     <Container>
-      <Title>Scissors, stone, paper</Title>
+      <Title>Scissors, stone, paper </Title>
       <ButtonContainer>
-      <Button onClick={() => handleUserChoice("Scissors")}><Image src="/Scissors.svg" width={30} height={30}/></Button>
-      <Button onClick={() => handleUserChoice("Stone")}><Image src="/rock-svgrepo-com.svg" width={30} height={30}/></Button>
-      <Button onClick={() => handleUserChoice("Paper")}><Image src="/Paper.svg" width={30} height={30}/></Button>
+      <Button onClick={() => handleUserChoice("Scissors")}><Image src="/Scissors.svg" width={50} height={50}/></Button>
+      <Button onClick={() => handleUserChoice("Stone")}><Image src="/rock-svgrepo-com.svg" width={50} height={50}/></Button>
+      <Button onClick={() => handleUserChoice("Paper")}><Image src="/Paper.svg" width={50} height={50}/></Button>
       </ButtonContainer>
       <Choice userChoice={userChoice}computerChoice={computerChoice}/>
       
